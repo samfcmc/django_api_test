@@ -4,6 +4,11 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from quickstart.serializers import UserSerializer, GroupSerializer
 
+from django.contrib.auth import authenticate, login
+
+from rest_framework import authentication
+from rest_framework import exceptions
+
 # Create your views here.
 
 class UserViewSet(viewsets.ModelViewSet):
